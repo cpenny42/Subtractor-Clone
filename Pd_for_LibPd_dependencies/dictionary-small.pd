@@ -1,0 +1,251 @@
+#N canvas -460 23 968 628 10;
+#X obj 192 56 t a a;
+#X obj 219 76 list length;
+#X obj 219 96 > 1;
+#X obj 312 312 route x;
+#X obj 352 253 list split 1;
+#X obj 352 272 list prepend symbol;
+#X obj 351 292 list trim;
+#X obj 347 137 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 347 156 t b b;
+#X msg 347 178 addcomma;
+#X msg 351 213 set;
+#X obj 312 354 list;
+#X obj 312 333 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 245 368 spigot;
+#X msg 271 348 0;
+#X msg 280 348 1;
+#X obj 245 157 t b a b a a b;
+#X obj 245 176 t b b;
+#X msg 286 178 set;
+#X obj 18 276 route x;
+#X obj 58 217 list split 1;
+#X obj 58 236 list prepend symbol;
+#X obj 57 256 list trim;
+#X obj 252 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 192 -17 inlet SET_&_GET;
+#X obj 20 394 outlet;
+#N canvas 958 69 450 300 ggate 0;
+#X obj -249 -112 spigot;
+#X obj -301 -136 == 0;
+#X obj -267 -221 inlet;
+#X obj -334 -220 inlet;
+#X obj -249 -89 outlet;
+#X obj -334 -90 outlet;
+#X obj -334 -113 spigot;
+#X obj -267 -156 t f f;
+#X obj -334 -186 t a a;
+#X obj -240 -135 > 0;
+#X obj -250 -200 loadbang;
+#X msg -250 -180 0;
+#X connect 0 0 4 0;
+#X connect 1 0 6 1;
+#X connect 2 0 7 0;
+#X connect 3 0 8 0;
+#X connect 6 0 5 0;
+#X connect 7 0 1 0;
+#X connect 7 1 9 0;
+#X connect 8 0 6 0;
+#X connect 8 1 0 0;
+#X connect 9 0 0 1;
+#X connect 10 0 11 0;
+#X connect 11 0 7 0;
+#X restore 192 118 pd ggate;
+#N canvas 611 457 450 300 ladd3 0;
+#X obj 30 5 inlet;
+#X obj 30 27 t b a;
+#X msg 30 49 addcomma;
+#X obj 57 69 list prepend add2;
+#X obj 57 89 list trim;
+#X obj 47 116 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X restore 351 389 pd ladd3;
+#N canvas 604 163 450 300 lset 0;
+#X obj 73 217 outlet;
+#X obj 16 15 inlet MESSAGE_TO_SET;
+#X obj 16 36 route bang;
+#X obj 73 173 list prepend set;
+#X obj 73 194 list trim;
+#X msg 73 152 NULL NULL;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 0 0;
+#X connect 5 0 3 0;
+#X restore 451 178 pd lset NULL NULL;
+#N canvas 611 457 450 300 ladd3 0;
+#X obj 30 5 inlet;
+#X obj 30 27 t b a;
+#X msg 30 49 addcomma;
+#X obj 57 69 list prepend add2;
+#X obj 57 89 list trim;
+#X obj 47 116 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X restore 184 178 pd ladd3;
+#X obj 24 165 t b a;
+#X obj 192 9 route set get all clear reset;
+#X msg 18 195 NULL NULL \, title Hypnosis \, portamento 0 \, polyphony
+12 \, ext_filter_freq 0 \, ext_filter_res 0 \, ext_lfo 0 \, ext_phase
+0 \, range 12 \, bend 64.0003 \, mod 0 \, mod_filter_freq 0 \, mod_filter_res
+0 \, mod_lfo 0 \, mod_phase 127 \, mod_fm 0 \, osc1_phase 0 \, osc1_mode
+- \, osc1_waveform 4 \, osc1_oct 4 \, osc1_semi 0 \, osc1_cent 5 \,
+osc1_kbd 1 \, fm 0 \, osc2 1 \, osc2_phase 63.5 \, osc2_mode x \, osc2_oct
+4 \, osc2_semi 0 \, osc2_cent -5 \, osc2_kbd 1 \, mix 71.0494 \, ring_mod
+1 \, noise 0 \, noise_decay 0 \, noise_color 0 \, noise_level 0 \,
+lfo1_sync 0 \, lfo1_rate 3.10444 \, lfo1_waveform saw \, lfo1_dest
+filter_freq \, mod_env_a 0 \, mod_env_d 47.8719 \, mod_env_s 0.3 \,
+mod_env_r 0.3 \, mod_env_inv 0 \, mod_env_amt 0 \, mod_env_dest fm
+\, lfo2_dest phase \, lfo2_rate 7.05556 \, lfo2_amount 28.2222 \, lfo2_kbd
+0 \, lfo2_delay 0 \, filter_freq 3.38667 \, filter_res 98.2133 \, filter_type
+bp \, filter_link 0 \, filter2 1 \, filter_freq2 96.52 \, filter_res2
+7.72 \, level 0.793333 \, filter_env_a 4.99755 \, filter_env_d 55.81
+\, filter_env_s 0.3 \, filter_env_r 47.7927 \, filter_env_amt 11.6417
+\, filter_env_inv 0 \, amp_env_a 53.6359 \, amp_env_d 107.33 \, amp_env_s
+47.625 \, amp_env_r 127 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
+0 \, velocity_phase 0 \, velocity_freq2 0 \, velocity_filter_env 21.1667
+\, velocity_filter_decay 0 \, velocity_mix 0 \, velocity_attack 0 \,
+lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
+\,;
+#X msg 85 252 NULL NULL \, title Hypnosis \, portamento 0 \, polyphony
+12 \, ext_filter_freq 0 \, ext_filter_res 0 \, ext_lfo 0 \, ext_phase
+0 \, range 12 \, bend 64.0003 \, mod 0 \, mod_filter_freq 0 \, mod_filter_res
+0 \, mod_lfo 0 \, mod_phase 127 \, mod_fm 0 \, osc1_phase 0 \, osc1_mode
+- \, osc1_waveform 4 \, osc1_oct 4 \, osc1_semi 0 \, osc1_cent 5 \,
+osc1_kbd 1 \, fm 0 \, osc2 1 \, osc2_phase 63.5 \, osc2_mode x \, osc2_oct
+4 \, osc2_semi 0 \, osc2_cent -5 \, osc2_kbd 1 \, mix 71.0494 \, ring_mod
+1 \, noise 0 \, noise_decay 0 \, noise_color 0 \, noise_level 0 \,
+lfo1_sync 0 \, lfo1_rate 3.10444 \, lfo1_waveform saw \, lfo1_dest
+filter_freq \, mod_env_a 0 \, mod_env_d 47.8719 \, mod_env_s 0.3 \,
+mod_env_r 0.3 \, mod_env_inv 0 \, mod_env_amt 0 \, mod_env_dest fm
+\, lfo2_dest phase \, lfo2_rate 7.05556 \, lfo2_amount 28.2222 \, lfo2_kbd
+0 \, lfo2_delay 0 \, filter_freq 3.38667 \, filter_res 98.2133 \, filter_type
+bp \, filter_link 0 \, filter2 1 \, filter_freq2 96.52 \, filter_res2
+7.72 \, level 0.793333 \, filter_env_a 4.99755 \, filter_env_d 55.81
+\, filter_env_s 0.3 \, filter_env_r 47.7927 \, filter_env_amt 11.6417
+\, filter_env_inv 0 \, amp_env_a 53.6359 \, amp_env_d 107.33 \, amp_env_s
+47.625 \, amp_env_r 127 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
+0 \, velocity_phase 0 \, velocity_freq2 0 \, velocity_filter_env 21.1667
+\, velocity_filter_decay 0 \, velocity_mix 0 \, velocity_attack 0 \,
+lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
+\,;
+#X msg 456 -19 NULL NULL \, title Hypnosis \, portamento 0 \, polyphony
+12 \, ext_filter_freq 0 \, ext_filter_res 0 \, ext_lfo 0 \, ext_phase
+0 \, range 12 \, bend 64.0003 \, mod 0 \, mod_filter_freq 0 \, mod_filter_res
+0 \, mod_lfo 0 \, mod_phase 127 \, mod_fm 0 \, osc1_phase 0 \, osc1_mode
+- \, osc1_waveform 4 \, osc1_oct 4 \, osc1_semi 0 \, osc1_cent 5 \,
+osc1_kbd 1 \, fm 0 \, osc2 1 \, osc2_phase 63.5 \, osc2_mode x \, osc2_oct
+4 \, osc2_semi 0 \, osc2_cent -5 \, osc2_kbd 1 \, mix 71.0494 \, ring_mod
+1 \, noise 0 \, noise_decay 0 \, noise_color 0 \, noise_level 0 \,
+lfo1_sync 0 \, lfo1_rate 3.10444 \, lfo1_waveform saw \, lfo1_dest
+filter_freq \, mod_env_a 0 \, mod_env_d 47.8719 \, mod_env_s 0.3 \,
+mod_env_r 0.3 \, mod_env_inv 0 \, mod_env_amt 0 \, mod_env_dest fm
+\, lfo2_dest phase \, lfo2_rate 7.05556 \, lfo2_amount 28.2222 \, lfo2_kbd
+0 \, lfo2_delay 0 \, filter_freq 3.38667 \, filter_res 98.2133 \, filter_type
+bp \, filter_link 0 \, filter2 1 \, filter_freq2 96.52 \, filter_res2
+7.72 \, level 0.793333 \, filter_env_a 4.99755 \, filter_env_d 55.81
+\, filter_env_s 0.3 \, filter_env_r 47.7927 \, filter_env_amt 11.6417
+\, filter_env_inv 0 \, amp_env_a 53.6359 \, amp_env_d 107.33 \, amp_env_s
+47.625 \, amp_env_r 127 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
+0 \, velocity_phase 0 \, velocity_freq2 0 \, velocity_filter_env 21.1667
+\, velocity_filter_decay 0 \, velocity_mix 0 \, velocity_attack 0 \,
+lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
+\,;
+#X msg 464 238 NULL NULL \, title Hypnosis \, portamento 0 \, polyphony
+12 \, ext_filter_freq 0 \, ext_filter_res 0 \, ext_lfo 0 \, ext_phase
+0 \, range 12 \, bend 64.0003 \, mod 0 \, mod_filter_freq 0 \, mod_filter_res
+0 \, mod_lfo 0 \, mod_phase 127 \, mod_fm 0 \, osc1_phase 0 \, osc1_mode
+- \, osc1_waveform 4 \, osc1_oct 4 \, osc1_semi 0 \, osc1_cent 5 \,
+osc1_kbd 1 \, fm 0 \, osc2 1 \, osc2_phase 63.5 \, osc2_mode x \, osc2_oct
+4 \, osc2_semi 0 \, osc2_cent -5 \, osc2_kbd 1 \, mix 71.0494 \, ring_mod
+1 \, noise 0 \, noise_decay 0 \, noise_color 0 \, noise_level 0 \,
+lfo1_sync 0 \, lfo1_rate 3.10444 \, lfo1_waveform saw \, lfo1_dest
+filter_freq \, mod_env_a 0 \, mod_env_d 47.8719 \, mod_env_s 0.3 \,
+mod_env_r 0.3 \, mod_env_inv 0 \, mod_env_amt 0 \, mod_env_dest fm
+\, lfo2_dest phase \, lfo2_rate 7.05556 \, lfo2_amount 28.2222 \, lfo2_kbd
+0 \, lfo2_delay 0 \, filter_freq 3.38667 \, filter_res 98.2133 \, filter_type
+bp \, filter_link 0 \, filter2 1 \, filter_freq2 96.52 \, filter_res2
+7.72 \, level 0.793333 \, filter_env_a 4.99755 \, filter_env_d 55.81
+\, filter_env_s 0.3 \, filter_env_r 47.7927 \, filter_env_amt 11.6417
+\, filter_env_inv 0 \, amp_env_a 53.6359 \, amp_env_d 107.33 \, amp_env_s
+47.625 \, amp_env_r 127 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
+0 \, velocity_phase 0 \, velocity_freq2 0 \, velocity_filter_env 21.1667
+\, velocity_filter_decay 0 \, velocity_mix 0 \, velocity_attack 0 \,
+lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
+\,;
+#X msg 311 -20 mode legato;
+#X connect 0 0 26 0;
+#X connect 0 1 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 26 1;
+#X connect 3 0 12 0;
+#X connect 3 1 27 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 6 0 3 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 8 1 28 0;
+#X connect 9 0 34 0;
+#X connect 9 0 32 0;
+#X connect 9 0 33 0;
+#X connect 10 0 35 0;
+#X connect 11 0 27 0;
+#X connect 12 0 11 0;
+#X connect 12 0 14 0;
+#X connect 13 0 27 0;
+#X connect 14 0 13 1;
+#X connect 15 0 13 1;
+#X connect 16 0 17 0;
+#X connect 16 1 13 0;
+#X connect 16 2 34 0;
+#X connect 16 3 4 0;
+#X connect 16 4 11 1;
+#X connect 16 5 15 0;
+#X connect 16 5 10 0;
+#X connect 17 0 35 0;
+#X connect 17 1 18 0;
+#X connect 18 0 34 0;
+#X connect 18 0 32 0;
+#X connect 18 0 33 0;
+#X connect 19 0 25 0;
+#X connect 20 0 21 0;
+#X connect 21 0 22 0;
+#X connect 22 0 19 1;
+#X connect 23 0 33 0;
+#X connect 24 0 31 0;
+#X connect 26 0 30 0;
+#X connect 26 1 16 0;
+#X connect 27 0 35 0;
+#X connect 28 0 33 0;
+#X connect 28 0 34 0;
+#X connect 28 0 32 0;
+#X connect 29 0 32 0;
+#X connect 29 0 33 0;
+#X connect 29 0 34 0;
+#X connect 30 0 32 0;
+#X connect 30 1 20 0;
+#X connect 31 0 0 0;
+#X connect 31 1 0 0;
+#X connect 31 2 23 0;
+#X connect 31 3 7 0;
+#X connect 31 4 7 0;
+#X connect 31 5 0 0;
+#X connect 32 0 19 0;
+#X connect 33 0 25 0;
+#X connect 34 0 3 0;
+#X connect 35 0 29 0;
+#X connect 36 0 31 0;
