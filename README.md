@@ -1,0 +1,1 @@
+This is a clone of Reason's Subtractor synthesizer.  It uses patches from Pd for LibPd, but it should have a copy of all the required patches in the Pd_for_LibPd_dependencies folder.  The midi folder contains example MIDI files.
