@@ -6613,7 +6613,7 @@ lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
 #X connect 50 0 30 0;
 #X restore 363 143 pd 278130-Deep_Rhythm;
 #X obj 363 168 s 278130-Deep_Rhythm-out;
-#X obj 300 720 r 278130-Tread_Lightly-in;
+#X obj 287 578 r 278130-Tread_Lightly-in;
 #N canvas 653 99 450 300 278130-Tread_Lightly 0;
 #X obj -758 -75 t a a;
 #X obj -731 -55 list length;
@@ -6839,9 +6839,9 @@ velocity_filter_env 0 \, velocity_filter_decay 0 \, velocity_mix 21.1667
 #X connect 48 0 21 0;
 #X connect 49 0 47 0;
 #X connect 50 0 30 0;
-#X restore 300 745 pd 278130-Tread_Lightly;
-#X obj 300 770 s 278130-Tread_Lightly-out;
-#X obj 300 720 r 278130-Warm_Pad-in;
+#X restore 287 603 pd 278130-Tread_Lightly;
+#X obj 287 628 s 278130-Tread_Lightly-out;
+#X obj 474 505 r 278130-Warm_Pad-in;
 #N canvas 654 96 450 300 278130-Warm_Pad 0;
 #X obj -758 -75 t a a;
 #X obj -731 -55 list length;
@@ -7063,9 +7063,9 @@ velocity_filter_env 21.1667 \, velocity_filter_decay 0 \, velocity_mix
 #X connect 48 0 21 0;
 #X connect 49 0 47 0;
 #X connect 50 0 30 0;
-#X restore 300 745 pd 278130-Warm_Pad;
-#X obj 300 770 s 278130-Warm_Pad-out;
-#X obj 300 720 r 278130-Dead_Soul-in;
+#X restore 474 530 pd 278130-Warm_Pad;
+#X obj 474 555 s 278130-Warm_Pad-out;
+#X obj 43 91 r 278130-Dead_Soul-in;
 #N canvas 513 95 450 300 278130-Dead_Soul 0;
 #X obj -758 -75 t a a;
 #X obj -731 -55 list length;
@@ -7287,9 +7287,9 @@ velocity_phase 0 \, velocity_freq2 0 \, velocity_filter_env 0 \, velocity_filter
 #X connect 48 0 21 0;
 #X connect 49 0 47 0;
 #X connect 50 0 30 0;
-#X restore 300 745 pd 278130-Dead_Soul;
-#X obj 300 770 s 278130-Dead_Soul-out;
-#X obj 300 720 r 278130-Music_Box-in;
+#X restore 43 116 pd 278130-Dead_Soul;
+#X obj 43 141 s 278130-Dead_Soul-out;
+#X obj 175 655 r 278130-Music_Box-in;
 #N canvas 703 92 450 300 278130-Music_Box 0;
 #X obj -758 -75 t a a;
 #X obj -731 -55 list length;
@@ -7511,8 +7511,8 @@ retrig \, osc2_waveform 15 \,;
 #X connect 48 0 21 0;
 #X connect 49 0 47 0;
 #X connect 50 0 30 0;
-#X restore 300 745 pd 278130-Music_Box;
-#X obj 300 770 s 278130-Music_Box-out;
+#X restore 175 680 pd 278130-Music_Box;
+#X obj 175 705 s 278130-Music_Box-out;
 #X obj 300 720 r 278130-Electric-in;
 #N canvas 701 96 450 300 278130-Electric 0;
 #X obj -758 -75 t a a;
@@ -7738,7 +7738,7 @@ retrig \, osc2_waveform 15 \,;
 #X restore 300 745 pd 278130-Electric;
 #X obj 300 770 s 278130-Electric-out;
 #X obj 0 800 r 278130-8-bit-in;
-#N canvas 701 94 450 300 278130-8-bit 0;
+#N canvas 777 90 450 300 278130-8-bit 0;
 #X obj -758 -75 t a a;
 #X obj -731 -55 list length;
 #X obj -731 -35 > 1;
@@ -7756,7 +7756,7 @@ triangle \, lfo1_dest osc12 \, mod_env_a 5.00063 \, mod_env_d 10.1984
 0 \, mod_env_dest osc2 \, lfo2_dest amp \, lfo2_rate 56.4444 \, lfo2_amount
 0 \, lfo2_kbd 0 \, lfo2_delay 0 \, filter_freq 127 \, filter_res 0
 \, filter_type lp \, filter_link 0 \, filter2 0 \, filter_freq2 98.2133
-\, filter_res2 1 \, level 0.54 \, filter_env_a 4.99755 \, filter_env_d
+\, filter_res2 1 \, level 0.3 \, filter_env_a 4.99755 \, filter_env_d
 29.9997 \, filter_env_s 127 \, filter_env_r 19.9979 \, filter_env_amt
 0 \, filter_env_inv 1 \, amp_env_a 0.1 \, amp_env_d 0.1 \, amp_env_s
 127 \, amp_env_r 4.06563 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
@@ -7786,7 +7786,7 @@ triangle \, lfo1_dest osc12 \, mod_env_a 5.00063 \, mod_env_d 10.1984
 0 \, mod_env_dest osc2 \, lfo2_dest amp \, lfo2_rate 56.4444 \, lfo2_amount
 0 \, lfo2_kbd 0 \, lfo2_delay 0 \, filter_freq 127 \, filter_res 0
 \, filter_type lp \, filter_link 0 \, filter2 0 \, filter_freq2 98.2133
-\, filter_res2 1 \, level 0.54 \, filter_env_a 4.99755 \, filter_env_d
+\, filter_res2 1 \, level 0.3 \, filter_env_a 4.99755 \, filter_env_d
 29.9997 \, filter_env_s 127 \, filter_env_r 19.9979 \, filter_env_amt
 0 \, filter_env_inv 1 \, amp_env_a 0.1 \, amp_env_d 0.1 \, amp_env_s
 127 \, amp_env_r 4.06563 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
@@ -7818,7 +7818,7 @@ triangle \, lfo1_dest osc12 \, mod_env_a 5.00063 \, mod_env_d 10.1984
 0 \, mod_env_dest osc2 \, lfo2_dest amp \, lfo2_rate 56.4444 \, lfo2_amount
 0 \, lfo2_kbd 0 \, lfo2_delay 0 \, filter_freq 127 \, filter_res 0
 \, filter_type lp \, filter_link 0 \, filter2 0 \, filter_freq2 98.2133
-\, filter_res2 1 \, level 0.54 \, filter_env_a 4.99755 \, filter_env_d
+\, filter_res2 1 \, level 0.3 \, filter_env_a 4.99755 \, filter_env_d
 29.9997 \, filter_env_s 127 \, filter_env_r 19.9979 \, filter_env_amt
 0 \, filter_env_inv 1 \, amp_env_a 0.1 \, amp_env_d 0.1 \, amp_env_s
 127 \, amp_env_r 4.06563 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env
@@ -7844,7 +7844,7 @@ triangle \, lfo1_dest osc12 \, mod_env_a 5.00063 \, mod_env_d 10.1984
 0 \, mod_env_dest osc2 \, lfo2_dest amp \, lfo2_rate 56.4444 \, lfo2_amount
 0 \, lfo2_kbd 0 \, lfo2_delay 0 \, filter_freq 127 \, filter_res 0
 \, filter_type lp \, filter_link 0 \, filter2 0 \, filter_freq2 98.2133
-\, filter_res2 1 \, level 0.54 \, filter_env_a 4.99755 \, filter_env_d
+\, filter_res2 1 \, level 0.3 \, filter_env_a 4.99755 \, filter_env_d
 29.9997 \, filter_env_s 127 \, filter_env_r 19.9979 \, filter_env_amt
 0 \, filter_env_inv 1 \, amp_env_a 0.1 \, amp_env_d 0.1 \, amp_env_s
 127 \, amp_env_r 4.06563 \, velocity_amp 0 \, velocity_fm 0 \, velocity_mod_env

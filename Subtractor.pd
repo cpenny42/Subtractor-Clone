@@ -1,4 +1,4 @@
-#N canvas 554 23 888 796 10;
+#N canvas 383 23 888 785 10;
 #X obj 0 0 cnv 15 873 340 empty empty empty 12 19 2 24 -204150 -262144
 0;
 #N canvas 257 452 450 300 title 0;
@@ -17,11 +17,11 @@
 #X obj 7 160 cnv 15 153 175 empty empty empty 20 12 0 14 -34454 -66577
 0;
 #X obj 22 209 vsl 15 100 0 127 0 0 \$0-bend \$0-bend_ Bend -3 113 1
-10 -33289 -191407 -228856 4989 1;
+10 -33289 -191407 -228856 5100 1;
 #X obj 64 209 vsl 15 100 0 127 0 0 \$0-mod \$0-mod_ Mod -1 113 1 10
--33289 -191407 -228856 0 1;
+-33289 -191407 -228856 9800 1;
 #X obj 18 170 nbx 3 14 0 48 0 0 \$0-range \$0-range_ Range 1 22 1 10
--1 -258113 -228856 12 256;
+-1 -258113 -228856 7 256;
 #X obj 52 169 bng 13 250 50 0 \$0-range_up \$0-range_up_ empty 17 7
 0 10 -128992 -228856 -1;
 #X obj 52 183 bng 13 250 50 0 \$0-range_down \$0-range_down_ empty
@@ -41,7 +41,7 @@
 #X obj 129 273 knob 19 19 0 127 0 0 \$0-mod_phase \$0-mod_phase_ Phase
 -32 9 1 9 -33289 -221187 -228856 0 1;
 #X obj 129 245 knob 19 19 0 127 0 0 \$0-mod_lfo \$0-mod_lfo_ LFO_1
--33 9 1 9 -33289 -221187 -228856 1800 1;
+-33 9 1 9 -33289 -221187 -228856 51 1;
 #X obj 129 217 knob 19 19 0 127 0 0 \$0-mod_filter_res \$0-mod_filter_res_
 F._Res -34 9 1 9 -33289 -221187 -228856 0 1;
 #X obj 129 189 knob 19 19 0 127 0 0 \$0-mod_filter_freq \$0-mod_filter_freq_
@@ -64,8 +64,8 @@ Portamento -16 30 1 9 -162280 -162280 -228856 0 1;
 empty 17 7 0 10 -128992 -228856 -1;
 #X obj 25 57 cnv 15 152 21 empty empty empty 18 9 2 15 -228856 -258113
 0;
-#X obj 27 59 cnv 15 148 17 empty \$0-gui_title 8-bit 4 8 2 15 -53380
--258113 0;
+#X obj 27 59 cnv 15 148 17 empty \$0-gui_title Tread_Lightly 4 8 2
+15 -53380 -258113 0;
 #X obj 178 67 bng 11 250 50 0 \$0-patch_down \$0-patch_down_ empty
 17 7 0 10 -75731 -228856 -1;
 #X obj 178 57 bng 11 250 50 0 \$0-patch_up \$0-patch_up_ empty 17 7
@@ -95,7 +95,7 @@ F._Freq -37 9 1 9 -162280 -221187 -228856 0 1;
 #X obj 186 98 tgl 11 0 \$0-low_bw \$0-low_bw_ Lo_BW 17 7 1 9 -191407
 -1 -228856 0 1;
 #X obj 268 25 knob 19 19 0 127 0 0 \$0-osc1_phase \$0-osc1_phase_ Phase
--4 29 1 9 -33289 -162280 -228856 300 1;
+-4 29 1 9 -33289 -162280 -228856 0 1;
 #X obj 305 10 bng 8 250 50 0 \$0-osc1_x \$0-osc1_x_ X 11 3 1 9 -90881
 -258113 -262144;
 #X obj 305 22 bng 8 250 50 0 \$0-osc1_- \$0-osc1_-_ _ 12 0 1 9 -90881
@@ -129,7 +129,7 @@ empty 17 7 0 10 -128992 -228856 -1;
 #X obj 256 71 tgl 11 0 \$0-osc2 \$0-osc2_ empty 17 7 0 10 -258113 -1
 -1 1 1;
 #X obj 436 46 tgl 10 0 \$0-osc1_kbd \$0-osc1_kbd_ Kbd._Track 13 5 1
-9 -258113 -1 -228856 0 1;
+9 -258113 -1 -228856 1 1;
 #X obj 509 15 nbx 3 14 -99 99 0 0 \$0-osc1_cent \$0-osc1_cent_ Cent
 6 22 1 10 -1 -258113 -228856 0 256;
 #X obj 543 14 bng 13 250 50 0 \$0-osc1_cent_up \$0-osc1_cent_up_ empty
@@ -139,27 +139,27 @@ empty 17 7 0 10 -128992 -228856 -1;
 #X obj 565 17 knob 19 19 0 127 0 0 \$0-fm \$0-fm_ FM 2 28 1 9 -128992
 -221187 -228856 0 1;
 #X obj 567 59 knob 19 19 0 127 0 0 \$0-mix \$0-mix_ Mix 2 28 1 9 -128992
--221187 -228856 400 1;
+-221187 -228856 1000 1;
 #X obj 571 98 tgl 10 0 \$0-ring_mod \$0-ring_mod_ Ring_Mod -15 17 1
-9 -258113 -1 -228856 0 1;
+9 -258113 -1 -228856 1 1;
 #X obj 268 86 knob 19 19 0 127 0 0 \$0-osc2_phase \$0-osc2_phase_ Phase
--4 29 1 9 -33289 -162280 -228856 600 1;
+-4 29 1 9 -33289 -162280 -228856 869 1;
 #X obj 305 71 bng 8 250 50 0 \$0-osc2_x \$0-osc2_x_ X 11 3 1 9 -90881
 -258113 -262144;
-#X obj 305 83 bng 8 250 50 0 \$0-osc2_- \$0-osc2_-_ _ 12 0 1 9 -90881
+#X obj 305 83 bng 8 250 50 0 \$0-osc2_- \$0-osc2_-_ _ 12 0 1 9 -258699
 -258113 -262144;
-#X obj 305 95 bng 8 250 50 0 \$0-osc2_o \$0-osc2_o_ O 11 3 1 9 -258699
+#X obj 305 95 bng 8 250 50 0 \$0-osc2_o \$0-osc2_o_ O 11 3 1 9 -90881
 -258113 -262144;
 #X obj 305 107 bng 13 250 50 0 \$0-osc2_mode \$0-osc2_mode_toggle Mode
 15 7 1 10 -191407 -262144 -228856;
 #X obj 349 76 nbx 3 14 0 32 0 0 \$0-osc2_waveform \$0-osc2_waveform_
-Waveform -16 22 1 10 -1 -258113 -228856 3 256;
+Waveform -16 22 1 10 -1 -258113 -228856 12 256;
 #X obj 383 75 bng 13 250 50 0 \$0-osc2_waveform_up \$0-osc2_waveform_up_
 empty 17 7 0 10 -128992 -228856 -1;
 #X obj 383 89 bng 13 250 50 0 \$0-osc2_waveform_down \$0-osc2_waveform_down_
 empty 17 7 0 10 -128992 -228856 -1;
 #X obj 406 76 nbx 2 14 0 9 0 0 \$0-osc2_oct \$0-osc2_oct_ Oct 8 22
-1 10 -1 -258113 -228856 4 256;
+1 10 -1 -258113 -228856 3 256;
 #X obj 433 75 bng 13 250 50 0 \$0-osc2_oct_up \$0-osc2_oct_up_ empty
 17 7 0 10 -128992 -228856 -1;
 #X obj 433 89 bng 13 250 50 0 \$0-osc2_oct_down \$0-osc2_oct_down_
@@ -171,27 +171,27 @@ empty 17 7 0 10 -128992 -228856 -1;
 #X obj 484 89 bng 13 250 50 0 \$0-osc2_semi_down \$0-osc2_semi_down_
 empty 17 7 0 10 -128992 -228856 -1;
 #X obj 436 107 tgl 10 0 \$0-osc2_kbd \$0-osc2_kbd_ Kbd._Track 13 5
-1 9 -258113 -1 -228856 0 1;
+1 9 -258113 -1 -228856 1 1;
 #X obj 509 76 nbx 3 14 -99 99 0 0 \$0-osc2_cent \$0-osc2_cent_ Cent
-6 22 1 10 -1 -258113 -228856 0 256;
+6 22 1 10 -1 -258113 -228856 -5 256;
 #X obj 543 75 bng 13 250 50 0 \$0-osc2_cent_up \$0-osc2_cent_up_ empty
 17 7 0 10 -128992 -228856 -1;
 #X obj 543 89 bng 13 250 50 0 \$0-osc2_cent_down \$0-osc2_cent_down_
 empty 17 7 0 10 -128992 -228856 -1;
 #X obj 265 148 knob 19 19 0 127 0 0 \$0-noise_decay \$0-noise_decay_
-Decay -4 28 1 9 -162280 -221187 -228856 0 1;
+Decay -4 28 1 9 -162280 -221187 -228856 1100 1;
 #X obj 304 148 knob 19 19 0 127 0 0 \$0-noise_color \$0-noise_color_
-Color -1 28 1 9 -162280 -221187 -228856 0 1;
+Color -1 28 1 9 -162280 -221187 -228856 100 1;
 #X obj 344 148 knob 19 19 0 127 0 0 \$0-noise_level \$0-noise_level_
-Level -1 28 1 9 -162280 -221187 -228856 0 1;
+Level -1 28 1 9 -162280 -221187 -228856 300 1;
 #X obj 256 132 tgl 11 0 \$0-noise \$0-noise_ empty 17 7 0 10 -258113
--1 -1 0 1;
+-1 -1 1 1;
 #X obj 253 190 cnv 15 120 145 empty empty LFO_1 7 9 1 9 -34454 -228856
 0;
 #X obj 272 213 tgl 10 0 \$0-lfo1_sync \$0-lfo1_sync_ Sync -6 15 1 9
 -258113 -1 -228856 0 1;
 #X obj 309 200 knob 19 19 0 127 0 0 \$0-lfo1_rate \$0-lfo1_rate_ Rate
-0 28 1 9 -162280 -221187 -228856 800 1;
+0 28 1 9 -162280 -221187 -228856 900 1;
 #X obj 344 200 knob 19 19 0 127 0 0 \$0-lfo1_amount \$0-lfo1_amount_
 Amount -8 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 257 247 bng 8 250 50 0 \$0-lfo1_triangle \$0-lfo1_triangle_
@@ -219,13 +219,13 @@ F._Freq 11 3 1 9 -90881 -258113 -262144;
 #X obj 322 307 bng 8 250 50 0 \$0-lfo1_mix \$0-lfo1_mix_ Mix 12 4 1
 9 -90881 -258113 -262144;
 #X obj 395 155 vsl 13 65 0 127 0 0 \$0-mod_env_a \$0-mod_env_a_ A 5
-75 0 10 -66577 -262144 -228856 252 1;
+75 0 10 -66577 -262144 -228856 300 1;
 #X obj 415 155 vsl 13 65 0.3 127 0 0 \$0-mod_env_d \$0-mod_env_d_ D
-5 75 0 10 -66577 -262144 -228856 500 1;
+5 75 0 10 -66577 -262144 -228856 0 1;
 #X obj 435 155 vsl 13 65 0.3 127 0 0 \$0-mod_env_s \$0-mod_env_s_ S
-5 75 0 10 -66577 -262144 -228856 1200 1;
+5 75 0 10 -66577 -262144 -228856 0 1;
 #X obj 455 155 vsl 13 65 0.3 127 0 0 \$0-mod_env_r \$0-mod_env_r_ R
-5 75 0 10 -66577 -262144 -228856 995 1;
+5 75 0 10 -66577 -262144 -228856 0 1;
 #X obj 484 197 knob 19 19 0 127 0 0 \$0-mod_env_amt \$0-mod_env_amt_
 Amt 0 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 485 152 tgl 15 0 \$0-mod_env_inv \$0-mod_env_inv_ Inv -1 22
@@ -235,9 +235,9 @@ Waveform 15 7 1 9 -191407 -262144 -228856;
 #X obj 322 320 bng 13 250 50 0 \$0-lfo1_dest \$0-lfo1_dest_toggle Dest
 15 7 1 9 -191407 -262144 -228856;
 #X obj 527 144 bng 8 250 50 0 \$0-mod_env_osc1 \$0-mod_env_osc1_ Osc_1
-11 4 1 9 -90881 -258113 -262144;
+11 4 1 9 -258699 -258113 -262144;
 #X obj 527 156 bng 8 250 50 0 \$0-mod_env_osc2 \$0-mod_env_osc2_ Osc_2
-12 4 1 9 -258699 -258113 -262144;
+12 4 1 9 -90881 -258113 -262144;
 #X obj 527 168 bng 8 250 50 0 \$0-mod_env_filter_freq2 \$0-mod_env_filter_freq2_
 Freq_2 11 3 1 9 -90881 -258113 -262144;
 #X obj 527 180 bng 8 250 50 0 \$0-mod_env_fm \$0-mod_env_fm_ FM 11
@@ -261,9 +261,9 @@ Freq -3 86 0 10 -66577 -262144 -228856 7500 1;
 #X obj 674 72 bng 8 250 50 0 \$0-filter_bp \$0-filter_bp_ BP_12 12
 3 1 9 -90881 -258113 -262144;
 #X obj 674 83 bng 8 250 50 0 \$0-filter_lp \$0-filter_lp_ LP_12 12
-3 1 9 -258699 -258113 -262144;
+3 1 9 -90881 -258113 -262144;
 #X obj 674 94 bng 8 250 50 0 \$0-filter_lp24 \$0-filter_lp24_ LP_24
-12 4 1 9 -90881 -258113 -262144;
+12 4 1 9 -258699 -258113 -262144;
 #X obj 723 86 knob 19 19 0 127 0 0 \$0-filter_kbd \$0-filter_kbd_ Kbd
 2 28 1 9 -128992 -221187 -228856 0 1;
 #X obj 674 106 bng 13 250 50 0 \$0-filter_type \$0-filter_type_toggle
@@ -273,47 +273,47 @@ Type 15 7 1 9 -191407 -262144 -228856;
 #X obj 757 6 cnv 15 70 116 empty empty FILTER_2 7 10 1 10 -34454 -228856
 0;
 #X obj 798 29 vsl 13 76 1 127 0 0 \$0-filter_res2 \$0-filter_res2_
-Res 0 86 0 10 -66577 -262144 -228856 0 1;
+Res 0 86 0 10 -66577 -262144 -228856 900 1;
 #X obj 771 29 vsl 13 76 0 127 0 0 \$0-filter_freq2 \$0-filter_freq2_
-Freq -3 86 0 10 -66577 -262144 -228856 5800 1;
+Freq -3 86 0 10 -66577 -262144 -228856 3100 1;
 #X obj 749 10 tgl 10 0 \$0-filter2 \$0-filter2_ empty -6 15 1 9 -258113
--1 -228856 0 1;
+-1 -228856 1 1;
 #X obj 703 10 tgl 10 0 \$0-filter_link \$0-filter_link_ Link-> 13 5
 1 10 -258113 -1 -228856 0 1;
 #X obj 834 6 cnv 15 33 116 empty empty empty 7 10 1 10 -34454 -228856
 0;
 #X obj 843 30 vsl 13 76 0 1 0 0 \$0-level \$0-level_ Level -6 86 0
-10 -66577 -262144 -228856 4050 1;
+10 -66577 -262144 -228856 7500 1;
 #X obj 610 128 cnv 15 140 110 empty empty FILTER_ENVELOPE 5 9 1 10
 -34454 -228856 0;
 #X obj 625 155 vsl 13 65 0.1 127 0 0 \$0-filter_env_a \$0-filter_env_a_
 A 5 75 0 10 -66577 -262144 -228856 247 1;
 #X obj 645 155 vsl 13 65 1 127 0 0 \$0-filter_env_d \$0-filter_env_d_
-D 5 75 0 10 -66577 -262144 -228856 1473 1;
+D 5 75 0 10 -66577 -262144 -228856 2277 1;
 #X obj 665 155 vsl 13 65 0.3 127 0 0 \$0-filter_env_s \$0-filter_env_s_
-S 5 75 0 10 -66577 -262144 -228856 6400 1;
+S 5 75 0 10 -66577 -262144 -228856 595 1;
 #X obj 685 155 vsl 13 65 0.3 127 0 0 \$0-filter_env_r \$0-filter_env_r_
-R 5 75 0 10 -66577 -262144 -228856 995 1;
+R 5 75 0 10 -66577 -262144 -228856 3192 1;
 #X obj 714 197 knob 19 19 0 127 0 0 \$0-filter_env_amt \$0-filter_env_amt_
 Amt 0 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 715 152 tgl 15 0 \$0-filter_env_inv \$0-filter_env_inv_ Inv
--1 22 0 10 -162280 -1 -228856 1 1;
+-1 22 0 10 -162280 -1 -228856 0 1;
 #X obj 757 128 cnv 15 110 110 empty empty AMP_ENVELOPE 5 9 1 10 -34454
 -228856 0;
 #X obj 775 156 vsl 13 65 0.1 127 0 0 \$0-amp_env_a \$0-amp_env_a_ A
 5 75 0 10 -66577 -262144 -228856 0 1;
 #X obj 795 156 vsl 13 65 0.1 127 0 0 \$0-amp_env_d \$0-amp_env_d_ D
-5 75 0 10 -66577 -262144 -228856 0 1;
+5 75 0 10 -66577 -262144 -228856 1000 1;
 #X obj 815 156 vsl 13 65 0 127 0 0 \$0-amp_env_s \$0-amp_env_s_ S 5
-75 0 10 -66577 -262144 -228856 6400 1;
+75 0 10 -66577 -262144 -228856 1800 1;
 #X obj 835 156 vsl 13 65 0.1 127 0 0 \$0-amp_env_r \$0-amp_env_r_ R
-5 75 0 10 -66577 -262144 -228856 200 1;
+5 75 0 10 -66577 -262144 -228856 1000 1;
 #X obj 610 245 cnv 15 257 90 empty empty VELOCITY 7 11 1 10 -34454
 -228856 0;
 #X obj 486 257 knob 19 19 0 127 0 0 \$0-lfo2_rate \$0-lfo2_rate_ Rate
-0 28 1 9 -162280 -221187 -228856 800 1;
+0 28 1 9 -162280 -221187 -228856 622 1;
 #X obj 545 257 knob 19 19 0 127 0 0 \$0-lfo2_amount \$0-lfo2_amount_
-Amount -8 28 1 9 -162280 -221187 -228856 0 1;
+Amount -8 28 1 9 -162280 -221187 -228856 1800 1;
 #X obj 404 270 bng 8 250 50 0 \$0-lfo2_osc12 \$0-lfo2_osc12_ Osc_1&2
 11 4 1 9 -90881 -258113 -262144;
 #X obj 404 282 bng 8 250 50 0 \$0-lfo2_phase \$0-lfo2_phase_ Phase
@@ -325,11 +325,11 @@ F._Freq_2 11 3 1 9 -90881 -258113 -262144;
 #X obj 404 319 bng 13 250 50 0 \$0-lfo2_dest \$0-lfo2_dest_toggle Dest
 15 7 1 9 -191407 -262144 -228856;
 #X obj 488 298 knob 19 19 0 127 0 0 \$0-lfo2_kbd \$0-lfo2_kbd_ Kbd
-2 28 1 9 -128992 -221187 -228856 0 1;
+2 28 1 9 -128992 -221187 -228856 400 1;
 #X obj 545 298 knob 19 19 0 127 0 0 \$0-lfo2_delay \$0-lfo2_delay_
-Delay -1 28 1 9 -162280 -221187 -228856 0 1;
+Delay -1 28 1 9 -162280 -221187 -228856 519 1;
 #X obj 680 255 knob 19 19 0 127 0 0 \$0-velocity_amp \$0-velocity_amp_
-Amp 0 28 1 9 -162280 -221187 -228856 0 1;
+Amp 0 28 1 9 -162280 -221187 -228856 1200 1;
 #X obj 730 254 knob 19 19 0 127 0 0 \$0-velocity_fm \$0-velocity_fm_
 FM 4 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 682 298 knob 19 19 0 127 0 0 \$0-velocity_filter_env \$0-velocity_filter_env_
@@ -341,7 +341,7 @@ M._Env -5 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 828 254 knob 19 19 0 127 0 0 \$0-velocity_phase \$0-velocity_phase_
 Phase -4 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 780 296 knob 19 19 0 127 0 0 \$0-velocity_mix \$0-velocity_mix_
-Mix 2 28 1 9 -128992 -221187 -228856 0 1;
+Mix 2 28 1 9 -128992 -221187 -228856 300 1;
 #X obj 828 296 knob 19 19 0 127 0 0 \$0-velocity_attack \$0-velocity_attack_
 A._Atk -4 28 1 9 -162280 -221187 -228856 0 1;
 #X obj 632 298 knob 19 19 0 127 0 0 \$0-velocity_freq2 \$0-velocity_freq2_
@@ -1342,7 +1342,7 @@ Freq_2 -4 28 1 9 -128992 -221187 -228856 0 1;
 #X connect 38 1 37 0;
 #X restore -333 -269 pd MIDI_IN;
 #X obj -333 -243 t b a;
-#X msg -333 -202 0 0;
+#X msg -333 -202 120 0;
 #N canvas 276 277 1010 110 voice 0;
 #X msg 9 -60 note \$1 \$2;
 #X obj 9 -15 outlet~;
@@ -16438,19 +16438,20 @@ Freq_2 -4 28 1 9 -128992 -221187 -228856 0 1;
 #X connect 16 0 0 1;
 #X connect 16 0 11 0;
 #X restore 67 343 pd implementation;
-#N canvas 218 262 372 214 META 0;
+#N canvas 218 262 371 257 META 0;
 #X text 3 3 Made for Music Apps on the iPad - Tufts University;
 #X text 3 20 Created by Chris Penny - February 2015;
 #X text 2 49 This is intended as a demonstration of music synthesis
-principles. Propellerhead retains all the rights to the Subtractor
-Synthesizer \, its namesake \, likeness \, sound \, and all other attributes.
-;
-#X text 2 107 The mechanism used for Data Persistence in this patch
-is separate from the Subtractor Synth. See Pd for LibPd for more info.
-;
-#X text 3 155 You can use this patch however you want \, so long as
+principles. Propellerhead owns the Subtractor Synthesizer and everything
+related to it.;
+#X text 2 98 The mechanism used for Data Persistence in this patch
+is separate from the Subtractor Synth. See Pd for LibPd for more info
+- the Subtractor-presets.pd patch inherits from Abstractions.pd and
+the Subtractor-state_manager.pd patch inherets from dictionary.pd;
+#X text 3 169 You can use this patch however you want \, so long as
 it does not infringe upon Propellerhead's intellectual property rights.
-;
+It currently uses [expr~] \, which is GPL Licensed \, but this could
+easily be replaced with audio math objects.;
 #X restore 837 765 pd META;
 #X obj 65 408 piano;
 #N canvas 0 23 1680 1001 (subpatch) 0;
@@ -16525,7 +16526,7 @@ it does not infringe upon Propellerhead's intellectual property rights.
 #X obj 107 243 pack 0 0;
 #X obj 101 86 t b b;
 #X obj 101 22 tgl 15 0 empty empty Play_MIDI_File 17 7 0 10 -144142
--139233 -1 1 1;
+-139233 -1 0 1;
 #X obj 101 65 sel 1 0;
 #X msg 52 128 stop;
 #X obj 101 42 t a b;
@@ -16553,7 +16554,7 @@ it does not infringe upon Propellerhead's intellectual property rights.
 #X obj 229 280 s \$0-bend_;
 #X obj 106 266 s \$0-note_in;
 #X msg 38 9 0;
-#X msg 95 119 read midi/1up.mid;
+#X msg 95 119 read midi/pokemon/title-screen.mid;
 #X msg 66 103 bang;
 #X connect 0 0 1 0;
 #X connect 0 2 25 0;
@@ -16926,175 +16927,175 @@ velocity_phase \, velocity_freq2 \, velocity_filter_env \, velocity_filter_decay
 #X obj 14 44 outlet;
 #N canvas 20 23 423 779 \$0-receivers 0;
 #X obj -10 0 outlet;
-#X obj 10 40 r 23424-title#;
+#X obj 10 40 r 1002-title#;
 #X obj 10 60 lprepend title;
-#X obj 20 80 r 23424-mode#;
+#X obj 20 80 r 1002-mode#;
 #X obj 20 100 lprepend mode;
-#X obj 30 120 r 23424-portamento#;
+#X obj 30 120 r 1002-portamento#;
 #X obj 30 140 lprepend portamento;
-#X obj 40 160 r 23424-lo_bw#;
+#X obj 40 160 r 1002-lo_bw#;
 #X obj 40 180 lprepend lo_bw;
-#X obj 50 200 r 23424-polyphony#;
+#X obj 50 200 r 1002-polyphony#;
 #X obj 50 220 lprepend polyphony;
-#X obj 60 240 r 23424-ext_mod#;
+#X obj 60 240 r 1002-ext_mod#;
 #X obj 60 260 lprepend ext_mod;
-#X obj 70 280 r 23424-ext_filter_freq#;
+#X obj 70 280 r 1002-ext_filter_freq#;
 #X obj 70 300 lprepend ext_filter_freq;
-#X obj 80 320 r 23424-ext_filter_res#;
+#X obj 80 320 r 1002-ext_filter_res#;
 #X obj 80 340 lprepend ext_filter_res;
-#X obj 90 360 r 23424-ext_lfo#;
+#X obj 90 360 r 1002-ext_lfo#;
 #X obj 90 380 lprepend ext_lfo;
-#X obj 100 400 r 23424-ext_phase#;
+#X obj 100 400 r 1002-ext_phase#;
 #X obj 100 420 lprepend ext_phase;
-#X obj 110 440 r 23424-range#;
+#X obj 110 440 r 1002-range#;
 #X obj 110 460 lprepend range;
-#X obj 120 480 r 23424-bend#;
+#X obj 120 480 r 1002-bend#;
 #X obj 120 500 lprepend bend;
-#X obj 130 520 r 23424-mod#;
+#X obj 130 520 r 1002-mod#;
 #X obj 130 540 lprepend mod;
-#X obj 140 560 r 23424-mod_filter_freq#;
+#X obj 140 560 r 1002-mod_filter_freq#;
 #X obj 140 580 lprepend mod_filter_freq;
-#X obj 150 600 r 23424-mod_filter_res#;
+#X obj 150 600 r 1002-mod_filter_res#;
 #X obj 150 620 lprepend mod_filter_res;
-#X obj 160 640 r 23424-mod_lfo#;
+#X obj 160 640 r 1002-mod_lfo#;
 #X obj 160 660 lprepend mod_lfo;
-#X obj 170 680 r 23424-mod_phase#;
+#X obj 170 680 r 1002-mod_phase#;
 #X obj 170 700 lprepend mod_phase;
-#X obj 180 720 r 23424-mod_fm#;
+#X obj 180 720 r 1002-mod_fm#;
 #X obj 180 740 lprepend mod_fm;
-#X obj 190 760 r 23424-osc1_phase#;
+#X obj 190 760 r 1002-osc1_phase#;
 #X obj 190 780 lprepend osc1_phase;
-#X obj 200 800 r 23424-osc1_mode#;
+#X obj 200 800 r 1002-osc1_mode#;
 #X obj 200 820 lprepend osc1_mode;
-#X obj 210 840 r 23424-osc1_waveform#;
+#X obj 210 840 r 1002-osc1_waveform#;
 #X obj 210 860 lprepend osc1_waveform;
-#X obj 220 880 r 23424-osc1_oct#;
+#X obj 220 880 r 1002-osc1_oct#;
 #X obj 220 900 lprepend osc1_oct;
-#X obj 230 920 r 23424-osc1_semi#;
+#X obj 230 920 r 1002-osc1_semi#;
 #X obj 230 940 lprepend osc1_semi;
-#X obj 240 960 r 23424-osc1_cent#;
+#X obj 240 960 r 1002-osc1_cent#;
 #X obj 240 980 lprepend osc1_cent;
-#X obj 250 1000 r 23424-osc1_kbd#;
+#X obj 250 1000 r 1002-osc1_kbd#;
 #X obj 250 1020 lprepend osc1_kbd;
-#X obj 260 1040 r 23424-fm#;
+#X obj 260 1040 r 1002-fm#;
 #X obj 260 1060 lprepend fm;
-#X obj 270 1080 r 23424-osc2#;
+#X obj 270 1080 r 1002-osc2#;
 #X obj 270 1100 lprepend osc2;
-#X obj 280 1120 r 23424-osc2_phase#;
+#X obj 280 1120 r 1002-osc2_phase#;
 #X obj 280 1140 lprepend osc2_phase;
-#X obj 290 1160 r 23424-osc2_mode#;
+#X obj 290 1160 r 1002-osc2_mode#;
 #X obj 290 1180 lprepend osc2_mode;
-#X obj 300 1200 r 23424-osc2_waveform#;
+#X obj 300 1200 r 1002-osc2_waveform#;
 #X obj 300 1220 lprepend osc2_waveform;
-#X obj 310 1240 r 23424-osc2_oct#;
+#X obj 310 1240 r 1002-osc2_oct#;
 #X obj 310 1260 lprepend osc2_oct;
-#X obj 320 1280 r 23424-osc2_semi#;
+#X obj 320 1280 r 1002-osc2_semi#;
 #X obj 320 1300 lprepend osc2_semi;
-#X obj 330 1320 r 23424-osc2_cent#;
+#X obj 330 1320 r 1002-osc2_cent#;
 #X obj 330 1340 lprepend osc2_cent;
-#X obj 340 1360 r 23424-osc2_kbd#;
+#X obj 340 1360 r 1002-osc2_kbd#;
 #X obj 340 1380 lprepend osc2_kbd;
-#X obj 350 1400 r 23424-mix#;
+#X obj 350 1400 r 1002-mix#;
 #X obj 350 1420 lprepend mix;
-#X obj 360 1440 r 23424-ring_mod#;
+#X obj 360 1440 r 1002-ring_mod#;
 #X obj 360 1460 lprepend ring_mod;
-#X obj 370 1480 r 23424-noise#;
+#X obj 370 1480 r 1002-noise#;
 #X obj 370 1500 lprepend noise;
-#X obj 380 1520 r 23424-noise_decay#;
+#X obj 380 1520 r 1002-noise_decay#;
 #X obj 380 1540 lprepend noise_decay;
-#X obj 390 1560 r 23424-noise_color#;
+#X obj 390 1560 r 1002-noise_color#;
 #X obj 390 1580 lprepend noise_color;
-#X obj 400 1600 r 23424-noise_level#;
+#X obj 400 1600 r 1002-noise_level#;
 #X obj 400 1620 lprepend noise_level;
-#X obj 410 1640 r 23424-lfo1_sync#;
+#X obj 410 1640 r 1002-lfo1_sync#;
 #X obj 410 1660 lprepend lfo1_sync;
-#X obj 420 1680 r 23424-lfo1_rate#;
+#X obj 420 1680 r 1002-lfo1_rate#;
 #X obj 420 1700 lprepend lfo1_rate;
-#X obj 430 1720 r 23424-lfo1_amount#;
+#X obj 430 1720 r 1002-lfo1_amount#;
 #X obj 430 1740 lprepend lfo1_amount;
-#X obj 440 1760 r 23424-lfo1_waveform#;
+#X obj 440 1760 r 1002-lfo1_waveform#;
 #X obj 440 1780 lprepend lfo1_waveform;
-#X obj 450 1800 r 23424-lfo1_dest#;
+#X obj 450 1800 r 1002-lfo1_dest#;
 #X obj 450 1820 lprepend lfo1_dest;
-#X obj 460 1840 r 23424-mod_env_a#;
+#X obj 460 1840 r 1002-mod_env_a#;
 #X obj 460 1860 lprepend mod_env_a;
-#X obj 470 1880 r 23424-mod_env_d#;
+#X obj 470 1880 r 1002-mod_env_d#;
 #X obj 470 1900 lprepend mod_env_d;
-#X obj 480 1920 r 23424-mod_env_s#;
+#X obj 480 1920 r 1002-mod_env_s#;
 #X obj 480 1940 lprepend mod_env_s;
-#X obj 490 1960 r 23424-mod_env_r#;
+#X obj 490 1960 r 1002-mod_env_r#;
 #X obj 490 1980 lprepend mod_env_r;
-#X obj 500 2000 r 23424-mod_env_inv#;
+#X obj 500 2000 r 1002-mod_env_inv#;
 #X obj 500 2020 lprepend mod_env_inv;
-#X obj 510 2040 r 23424-mod_env_amt#;
+#X obj 510 2040 r 1002-mod_env_amt#;
 #X obj 510 2060 lprepend mod_env_amt;
-#X obj 520 2080 r 23424-mod_env_dest#;
+#X obj 520 2080 r 1002-mod_env_dest#;
 #X obj 520 2100 lprepend mod_env_dest;
-#X obj 530 2120 r 23424-lfo2_dest#;
+#X obj 530 2120 r 1002-lfo2_dest#;
 #X obj 530 2140 lprepend lfo2_dest;
-#X obj 540 2160 r 23424-lfo2_rate#;
+#X obj 540 2160 r 1002-lfo2_rate#;
 #X obj 540 2180 lprepend lfo2_rate;
-#X obj 550 2200 r 23424-lfo2_amount#;
+#X obj 550 2200 r 1002-lfo2_amount#;
 #X obj 550 2220 lprepend lfo2_amount;
-#X obj 560 2240 r 23424-lfo2_kbd#;
+#X obj 560 2240 r 1002-lfo2_kbd#;
 #X obj 560 2260 lprepend lfo2_kbd;
-#X obj 570 2280 r 23424-lfo2_delay#;
+#X obj 570 2280 r 1002-lfo2_delay#;
 #X obj 570 2300 lprepend lfo2_delay;
-#X obj 580 2320 r 23424-filter_freq#;
+#X obj 580 2320 r 1002-filter_freq#;
 #X obj 580 2340 lprepend filter_freq;
-#X obj 590 2360 r 23424-filter_res#;
+#X obj 590 2360 r 1002-filter_res#;
 #X obj 590 2380 lprepend filter_res;
-#X obj 600 2400 r 23424-filter_type#;
+#X obj 600 2400 r 1002-filter_type#;
 #X obj 600 2420 lprepend filter_type;
-#X obj 610 2440 r 23424-filter_kbd#;
+#X obj 610 2440 r 1002-filter_kbd#;
 #X obj 610 2460 lprepend filter_kbd;
-#X obj 620 2480 r 23424-filter_link#;
+#X obj 620 2480 r 1002-filter_link#;
 #X obj 620 2500 lprepend filter_link;
-#X obj 630 2520 r 23424-filter2#;
+#X obj 630 2520 r 1002-filter2#;
 #X obj 630 2540 lprepend filter2;
-#X obj 640 2560 r 23424-filter_freq2#;
+#X obj 640 2560 r 1002-filter_freq2#;
 #X obj 640 2580 lprepend filter_freq2;
-#X obj 650 2600 r 23424-filter_res2#;
+#X obj 650 2600 r 1002-filter_res2#;
 #X obj 650 2620 lprepend filter_res2;
-#X obj 660 2640 r 23424-level#;
+#X obj 660 2640 r 1002-level#;
 #X obj 660 2660 lprepend level;
-#X obj 670 2680 r 23424-filter_env_a#;
+#X obj 670 2680 r 1002-filter_env_a#;
 #X obj 670 2700 lprepend filter_env_a;
-#X obj 680 2720 r 23424-filter_env_d#;
+#X obj 680 2720 r 1002-filter_env_d#;
 #X obj 680 2740 lprepend filter_env_d;
-#X obj 690 2760 r 23424-filter_env_s#;
+#X obj 690 2760 r 1002-filter_env_s#;
 #X obj 690 2780 lprepend filter_env_s;
-#X obj 700 2800 r 23424-filter_env_r#;
+#X obj 700 2800 r 1002-filter_env_r#;
 #X obj 700 2820 lprepend filter_env_r;
-#X obj 710 2840 r 23424-filter_env_amt#;
+#X obj 710 2840 r 1002-filter_env_amt#;
 #X obj 710 2860 lprepend filter_env_amt;
-#X obj 720 2880 r 23424-filter_env_inv#;
+#X obj 720 2880 r 1002-filter_env_inv#;
 #X obj 720 2900 lprepend filter_env_inv;
-#X obj 730 2920 r 23424-amp_env_a#;
+#X obj 730 2920 r 1002-amp_env_a#;
 #X obj 730 2940 lprepend amp_env_a;
-#X obj 740 2960 r 23424-amp_env_d#;
+#X obj 740 2960 r 1002-amp_env_d#;
 #X obj 740 2980 lprepend amp_env_d;
-#X obj 750 3000 r 23424-amp_env_s#;
+#X obj 750 3000 r 1002-amp_env_s#;
 #X obj 750 3020 lprepend amp_env_s;
-#X obj 760 3040 r 23424-amp_env_r#;
+#X obj 760 3040 r 1002-amp_env_r#;
 #X obj 760 3060 lprepend amp_env_r;
-#X obj 770 3080 r 23424-velocity_amp#;
+#X obj 770 3080 r 1002-velocity_amp#;
 #X obj 770 3100 lprepend velocity_amp;
-#X obj 780 3120 r 23424-velocity_fm#;
+#X obj 780 3120 r 1002-velocity_fm#;
 #X obj 780 3140 lprepend velocity_fm;
-#X obj 790 3160 r 23424-velocity_mod_env#;
+#X obj 790 3160 r 1002-velocity_mod_env#;
 #X obj 790 3180 lprepend velocity_mod_env;
-#X obj 800 3200 r 23424-velocity_phase#;
+#X obj 800 3200 r 1002-velocity_phase#;
 #X obj 800 3220 lprepend velocity_phase;
-#X obj 810 3240 r 23424-velocity_freq2#;
+#X obj 810 3240 r 1002-velocity_freq2#;
 #X obj 810 3260 lprepend velocity_freq2;
-#X obj 820 3280 r 23424-velocity_filter_env#;
+#X obj 820 3280 r 1002-velocity_filter_env#;
 #X obj 820 3300 lprepend velocity_filter_env;
-#X obj 830 3320 r 23424-velocity_filter_decay#;
+#X obj 830 3320 r 1002-velocity_filter_decay#;
 #X obj 830 3340 lprepend velocity_filter_decay;
-#X obj 840 3360 r 23424-velocity_mix#;
+#X obj 840 3360 r 1002-velocity_mix#;
 #X obj 840 3380 lprepend velocity_mix;
-#X obj 850 3400 r 23424-velocity_attack#;
+#X obj 850 3400 r 1002-velocity_attack#;
 #X obj 850 3420 lprepend velocity_attack;
 #X connect 1 0 2 0;
 #X connect 2 0 0 0;
@@ -17416,8 +17417,8 @@ Steel_Drum Corrupted_Organ Blasting_Drill Music_Box Polyphony 8-bit
 #X symbolatom 70 24 20 0 0 0 - #0-open_ #0-open;
 #X text -172 23 type the Preset Name \, then press enter:;
 #X text -226 22 To open \,;
-#X obj -121 56 cnv 15 100 1 empty \$0-alert empty 0 0 1 14 -262144
--176129 0;
+#X obj -25 54 cnv 15 100 1 empty \$0-alert empty 0 0 1 14 -262144 -176129
+0;
 #X connect 3 0 2 0;
 #X restore 4 191 pd \$0-open_dialog;
 #X obj 127 -1 r \$0-open;
@@ -17431,7 +17432,7 @@ Steel_Drum Corrupted_Organ Blasting_Drill Music_Box Polyphony 8-bit
 #X obj 127 114 list trim;
 #X obj 154 156 s \$0-default;
 #X obj 127 22 t a b;
-#X msg 227 114 8-bit;
+#X msg 227 114 Tread_Lightly;
 #X obj 260 97 r \$0-init5;
 #X obj 227 57 r \$0-last;
 #X msg 128 177 \; pd-Subtractor.pd menusave 1 \;;
@@ -17534,175 +17535,175 @@ velocity_phase \, velocity_freq2 \, velocity_filter_env \, velocity_filter_decay
 #N canvas 47 24 419 717 \$0-gui 0;
 #X obj -10 0 inlet;
 #X obj 15 40 route title;
-#X obj 15 60 s 23424-title_;
+#X obj 15 60 s 1002-title_;
 #X obj 30 80 route mode;
-#X obj 30 100 s 23424-mode_;
+#X obj 30 100 s 1002-mode_;
 #X obj 45 120 route portamento;
-#X obj 45 140 s 23424-portamento_;
+#X obj 45 140 s 1002-portamento_;
 #X obj 60 160 route lo_bw;
-#X obj 60 180 s 23424-lo_bw_;
+#X obj 60 180 s 1002-lo_bw_;
 #X obj 75 200 route polyphony;
-#X obj 75 220 s 23424-polyphony_;
+#X obj 75 220 s 1002-polyphony_;
 #X obj 90 240 route ext_mod;
-#X obj 90 260 s 23424-ext_mod_;
+#X obj 90 260 s 1002-ext_mod_;
 #X obj 105 280 route ext_filter_freq;
-#X obj 105 300 s 23424-ext_filter_freq_;
+#X obj 105 300 s 1002-ext_filter_freq_;
 #X obj 120 320 route ext_filter_res;
-#X obj 120 340 s 23424-ext_filter_res_;
+#X obj 120 340 s 1002-ext_filter_res_;
 #X obj 135 360 route ext_lfo;
-#X obj 135 380 s 23424-ext_lfo_;
+#X obj 135 380 s 1002-ext_lfo_;
 #X obj 150 400 route ext_phase;
-#X obj 150 420 s 23424-ext_phase_;
+#X obj 150 420 s 1002-ext_phase_;
 #X obj 165 440 route range;
-#X obj 165 460 s 23424-range_;
+#X obj 165 460 s 1002-range_;
 #X obj 180 480 route bend;
-#X obj 180 500 s 23424-bend_;
+#X obj 180 500 s 1002-bend_;
 #X obj 195 520 route mod;
-#X obj 195 540 s 23424-mod_;
+#X obj 195 540 s 1002-mod_;
 #X obj 210 560 route mod_filter_freq;
-#X obj 210 580 s 23424-mod_filter_freq_;
+#X obj 210 580 s 1002-mod_filter_freq_;
 #X obj 225 600 route mod_filter_res;
-#X obj 225 620 s 23424-mod_filter_res_;
+#X obj 225 620 s 1002-mod_filter_res_;
 #X obj 240 640 route mod_lfo;
-#X obj 240 660 s 23424-mod_lfo_;
+#X obj 240 660 s 1002-mod_lfo_;
 #X obj 255 680 route mod_phase;
-#X obj 255 700 s 23424-mod_phase_;
+#X obj 255 700 s 1002-mod_phase_;
 #X obj 270 720 route mod_fm;
-#X obj 270 740 s 23424-mod_fm_;
+#X obj 270 740 s 1002-mod_fm_;
 #X obj 285 760 route osc1_phase;
-#X obj 285 780 s 23424-osc1_phase_;
+#X obj 285 780 s 1002-osc1_phase_;
 #X obj 300 800 route osc1_mode;
-#X obj 300 820 s 23424-osc1_mode_;
+#X obj 300 820 s 1002-osc1_mode_;
 #X obj 315 840 route osc1_waveform;
-#X obj 315 860 s 23424-osc1_waveform_;
+#X obj 315 860 s 1002-osc1_waveform_;
 #X obj 330 880 route osc1_oct;
-#X obj 330 900 s 23424-osc1_oct_;
+#X obj 330 900 s 1002-osc1_oct_;
 #X obj 345 920 route osc1_semi;
-#X obj 345 940 s 23424-osc1_semi_;
+#X obj 345 940 s 1002-osc1_semi_;
 #X obj 360 960 route osc1_cent;
-#X obj 360 980 s 23424-osc1_cent_;
+#X obj 360 980 s 1002-osc1_cent_;
 #X obj 375 1000 route osc1_kbd;
-#X obj 375 1020 s 23424-osc1_kbd_;
+#X obj 375 1020 s 1002-osc1_kbd_;
 #X obj 390 1040 route fm;
-#X obj 390 1060 s 23424-fm_;
+#X obj 390 1060 s 1002-fm_;
 #X obj 405 1080 route osc2;
-#X obj 405 1100 s 23424-osc2_;
+#X obj 405 1100 s 1002-osc2_;
 #X obj 420 1120 route osc2_phase;
-#X obj 420 1140 s 23424-osc2_phase_;
+#X obj 420 1140 s 1002-osc2_phase_;
 #X obj 435 1160 route osc2_mode;
-#X obj 435 1180 s 23424-osc2_mode_;
+#X obj 435 1180 s 1002-osc2_mode_;
 #X obj 450 1200 route osc2_waveform;
-#X obj 450 1220 s 23424-osc2_waveform_;
+#X obj 450 1220 s 1002-osc2_waveform_;
 #X obj 465 1240 route osc2_oct;
-#X obj 465 1260 s 23424-osc2_oct_;
+#X obj 465 1260 s 1002-osc2_oct_;
 #X obj 480 1280 route osc2_semi;
-#X obj 480 1300 s 23424-osc2_semi_;
+#X obj 480 1300 s 1002-osc2_semi_;
 #X obj 495 1320 route osc2_cent;
-#X obj 495 1340 s 23424-osc2_cent_;
+#X obj 495 1340 s 1002-osc2_cent_;
 #X obj 510 1360 route osc2_kbd;
-#X obj 510 1380 s 23424-osc2_kbd_;
+#X obj 510 1380 s 1002-osc2_kbd_;
 #X obj 525 1400 route mix;
-#X obj 525 1420 s 23424-mix_;
+#X obj 525 1420 s 1002-mix_;
 #X obj 540 1440 route ring_mod;
-#X obj 540 1460 s 23424-ring_mod_;
+#X obj 540 1460 s 1002-ring_mod_;
 #X obj 555 1480 route noise;
-#X obj 555 1500 s 23424-noise_;
+#X obj 555 1500 s 1002-noise_;
 #X obj 570 1520 route noise_decay;
-#X obj 570 1540 s 23424-noise_decay_;
+#X obj 570 1540 s 1002-noise_decay_;
 #X obj 585 1560 route noise_color;
-#X obj 585 1580 s 23424-noise_color_;
+#X obj 585 1580 s 1002-noise_color_;
 #X obj 600 1600 route noise_level;
-#X obj 600 1620 s 23424-noise_level_;
+#X obj 600 1620 s 1002-noise_level_;
 #X obj 615 1640 route lfo1_sync;
-#X obj 615 1660 s 23424-lfo1_sync_;
+#X obj 615 1660 s 1002-lfo1_sync_;
 #X obj 630 1680 route lfo1_rate;
-#X obj 630 1700 s 23424-lfo1_rate_;
+#X obj 630 1700 s 1002-lfo1_rate_;
 #X obj 645 1720 route lfo1_amount;
-#X obj 645 1740 s 23424-lfo1_amount_;
+#X obj 645 1740 s 1002-lfo1_amount_;
 #X obj 660 1760 route lfo1_waveform;
-#X obj 660 1780 s 23424-lfo1_waveform_;
+#X obj 660 1780 s 1002-lfo1_waveform_;
 #X obj 675 1800 route lfo1_dest;
-#X obj 675 1820 s 23424-lfo1_dest_;
+#X obj 675 1820 s 1002-lfo1_dest_;
 #X obj 690 1840 route mod_env_a;
-#X obj 690 1860 s 23424-mod_env_a_;
+#X obj 690 1860 s 1002-mod_env_a_;
 #X obj 705 1880 route mod_env_d;
-#X obj 705 1900 s 23424-mod_env_d_;
+#X obj 705 1900 s 1002-mod_env_d_;
 #X obj 720 1920 route mod_env_s;
-#X obj 720 1940 s 23424-mod_env_s_;
+#X obj 720 1940 s 1002-mod_env_s_;
 #X obj 735 1960 route mod_env_r;
-#X obj 735 1980 s 23424-mod_env_r_;
+#X obj 735 1980 s 1002-mod_env_r_;
 #X obj 750 2000 route mod_env_inv;
-#X obj 750 2020 s 23424-mod_env_inv_;
+#X obj 750 2020 s 1002-mod_env_inv_;
 #X obj 765 2040 route mod_env_amt;
-#X obj 765 2060 s 23424-mod_env_amt_;
+#X obj 765 2060 s 1002-mod_env_amt_;
 #X obj 780 2080 route mod_env_dest;
-#X obj 780 2100 s 23424-mod_env_dest_;
+#X obj 780 2100 s 1002-mod_env_dest_;
 #X obj 795 2120 route lfo2_dest;
-#X obj 795 2140 s 23424-lfo2_dest_;
+#X obj 795 2140 s 1002-lfo2_dest_;
 #X obj 810 2160 route lfo2_rate;
-#X obj 810 2180 s 23424-lfo2_rate_;
+#X obj 810 2180 s 1002-lfo2_rate_;
 #X obj 825 2200 route lfo2_amount;
-#X obj 825 2220 s 23424-lfo2_amount_;
+#X obj 825 2220 s 1002-lfo2_amount_;
 #X obj 840 2240 route lfo2_kbd;
-#X obj 840 2260 s 23424-lfo2_kbd_;
+#X obj 840 2260 s 1002-lfo2_kbd_;
 #X obj 855 2280 route lfo2_delay;
-#X obj 855 2300 s 23424-lfo2_delay_;
+#X obj 855 2300 s 1002-lfo2_delay_;
 #X obj 870 2320 route filter_freq;
-#X obj 870 2340 s 23424-filter_freq_;
+#X obj 870 2340 s 1002-filter_freq_;
 #X obj 885 2360 route filter_res;
-#X obj 885 2380 s 23424-filter_res_;
+#X obj 885 2380 s 1002-filter_res_;
 #X obj 900 2400 route filter_type;
-#X obj 900 2420 s 23424-filter_type_;
+#X obj 900 2420 s 1002-filter_type_;
 #X obj 915 2440 route filter_kbd;
-#X obj 915 2460 s 23424-filter_kbd_;
+#X obj 915 2460 s 1002-filter_kbd_;
 #X obj 930 2480 route filter_link;
-#X obj 930 2500 s 23424-filter_link_;
+#X obj 930 2500 s 1002-filter_link_;
 #X obj 945 2520 route filter2;
-#X obj 945 2540 s 23424-filter2_;
+#X obj 945 2540 s 1002-filter2_;
 #X obj 960 2560 route filter_freq2;
-#X obj 960 2580 s 23424-filter_freq2_;
+#X obj 960 2580 s 1002-filter_freq2_;
 #X obj 975 2600 route filter_res2;
-#X obj 975 2620 s 23424-filter_res2_;
+#X obj 975 2620 s 1002-filter_res2_;
 #X obj 990 2640 route level;
-#X obj 990 2660 s 23424-level_;
+#X obj 990 2660 s 1002-level_;
 #X obj 1005 2680 route filter_env_a;
-#X obj 1005 2700 s 23424-filter_env_a_;
+#X obj 1005 2700 s 1002-filter_env_a_;
 #X obj 1020 2720 route filter_env_d;
-#X obj 1020 2740 s 23424-filter_env_d_;
+#X obj 1020 2740 s 1002-filter_env_d_;
 #X obj 1035 2760 route filter_env_s;
-#X obj 1035 2780 s 23424-filter_env_s_;
+#X obj 1035 2780 s 1002-filter_env_s_;
 #X obj 1050 2800 route filter_env_r;
-#X obj 1050 2820 s 23424-filter_env_r_;
+#X obj 1050 2820 s 1002-filter_env_r_;
 #X obj 1065 2840 route filter_env_amt;
-#X obj 1065 2860 s 23424-filter_env_amt_;
+#X obj 1065 2860 s 1002-filter_env_amt_;
 #X obj 1080 2880 route filter_env_inv;
-#X obj 1080 2900 s 23424-filter_env_inv_;
+#X obj 1080 2900 s 1002-filter_env_inv_;
 #X obj 1095 2920 route amp_env_a;
-#X obj 1095 2940 s 23424-amp_env_a_;
+#X obj 1095 2940 s 1002-amp_env_a_;
 #X obj 1110 2960 route amp_env_d;
-#X obj 1110 2980 s 23424-amp_env_d_;
+#X obj 1110 2980 s 1002-amp_env_d_;
 #X obj 1125 3000 route amp_env_s;
-#X obj 1125 3020 s 23424-amp_env_s_;
+#X obj 1125 3020 s 1002-amp_env_s_;
 #X obj 1140 3040 route amp_env_r;
-#X obj 1140 3060 s 23424-amp_env_r_;
+#X obj 1140 3060 s 1002-amp_env_r_;
 #X obj 1155 3080 route velocity_amp;
-#X obj 1155 3100 s 23424-velocity_amp_;
+#X obj 1155 3100 s 1002-velocity_amp_;
 #X obj 1170 3120 route velocity_fm;
-#X obj 1170 3140 s 23424-velocity_fm_;
+#X obj 1170 3140 s 1002-velocity_fm_;
 #X obj 1185 3160 route velocity_mod_env;
-#X obj 1185 3180 s 23424-velocity_mod_env_;
+#X obj 1185 3180 s 1002-velocity_mod_env_;
 #X obj 1200 3200 route velocity_phase;
-#X obj 1200 3220 s 23424-velocity_phase_;
+#X obj 1200 3220 s 1002-velocity_phase_;
 #X obj 1215 3240 route velocity_freq2;
-#X obj 1215 3260 s 23424-velocity_freq2_;
+#X obj 1215 3260 s 1002-velocity_freq2_;
 #X obj 1230 3280 route velocity_filter_env;
-#X obj 1230 3300 s 23424-velocity_filter_env_;
+#X obj 1230 3300 s 1002-velocity_filter_env_;
 #X obj 1245 3320 route velocity_filter_decay;
-#X obj 1245 3340 s 23424-velocity_filter_decay_;
+#X obj 1245 3340 s 1002-velocity_filter_decay_;
 #X obj 1260 3360 route velocity_mix;
-#X obj 1260 3380 s 23424-velocity_mix_;
+#X obj 1260 3380 s 1002-velocity_mix_;
 #X obj 1275 3400 route velocity_attack;
-#X obj 1275 3420 s 23424-velocity_attack_;
+#X obj 1275 3420 s 1002-velocity_attack_;
 #X connect 0 0 1 0;
 #X connect 0 0 3 0;
 #X connect 0 0 5 0;
@@ -18301,19 +18302,20 @@ velocity_phase \, velocity_freq2 \, velocity_filter_env \, velocity_filter_decay
 #X msg 55 74 3;
 #X msg 91 71 4;
 #X msg 134 71 5;
-#N canvas 35 395 450 300 anything 0;
-#X obj 21 33 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
+#N canvas 119 386 450 300 anything 0;
 #X obj 21 100 outlet;
 #X obj 21 10 inlet BANG;
 #X obj 92 11 inlet ANYTHING;
 #X msg 21 78 osc12;
 #X obj 43 33 list prepend set;
 #X obj 29 56 list trim;
-#X connect 3 0 5 0;
-#X connect 4 0 1 0;
-#X connect 5 0 6 0;
-#X connect 6 0 4 0;
+#X obj 18 34 b;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 6 0 3 0;
 #X restore -69 23 pd anything;
 #X obj -69 2 t b a;
 #X connect 1 0 44 0;
@@ -18511,7 +18513,7 @@ Steel_Drum Corrupted_Organ Blasting_Drill Music_Box Polyphony 8-bit
 #X obj -278 97 symbol;
 #X obj -248 136 f;
 #X obj -263 175 f;
-#X msg -357 -13 8-bit;
+#X msg -357 -13 Tread_Lightly;
 #X msg -437 54 Default Bass_Guitar Warm_Pad Obie_Brass Juicer_II Dead_Soul
 Electric_Piano Bread_Bass Bullfrogs Sticky_Lasers Cricket Space_Whistles
 Deep_Rhythm Tread_Lightly Electric Boink Frost_Bells Hypnosis Wool
@@ -18931,7 +18933,7 @@ Steel_Drum Corrupted_Organ Blasting_Drill Music_Box Polyphony 8-bit
 #X msg 32 209 color 24;
 #X msg 89 209 color 103;
 #X obj 393 131 hradio 15 1 0 4 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 1;
 #X msg 153 209 color 24;
 #X msg 210 209 color 103;
 #X obj 393 93 f;
@@ -19377,12 +19379,15 @@ mod_env_amt 0 \, mod_env_dest osc1 \, lfo2_dest osc12 \, lfo2_rate
 #X obj 41 95 s \$0-init3;
 #X obj 25 115 s \$0-init4;
 #X obj 10 135 s \$0-init5;
+#X obj 76 3 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 0 0 6 0;
 #X connect 0 1 5 0;
 #X connect 0 2 4 0;
 #X connect 0 3 3 0;
 #X connect 0 4 2 0;
 #X connect 1 0 0 0;
+#X connect 7 0 0 0;
 #X restore 100 -22 pd init;
 #N canvas 835 458 196 175 alert 0;
 #X obj 5 4 inlet;
@@ -19443,6 +19448,7 @@ mod_env_amt 0 \, mod_env_dest osc1 \, lfo2_dest osc12 \, lfo2_rate
 #X restore 298 -22 pd interface;
 #X obj 181 80 Subtractor-state_manager;
 #X obj 181 122 lprepend;
+#X obj 81 198 route;
 #X connect 0 0 5 0;
 #X connect 2 0 26 0;
 #X connect 3 0 24 0;
