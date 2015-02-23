@@ -1,4 +1,4 @@
-#N canvas -460 23 968 628 10;
+#N canvas 0 23 968 628 10;
 #X obj 192 56 t a a;
 #X obj 219 76 list length;
 #X obj 219 96 > 1;
@@ -185,7 +185,6 @@ bp \, filter_link 0 \, filter2 1 \, filter_freq2 96.52 \, filter_res2
 \, velocity_filter_decay 0 \, velocity_mix 0 \, velocity_attack 0 \,
 lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
 \,;
-#X msg 311 -20 mode legato;
 #X connect 0 0 26 0;
 #X connect 0 1 1 0;
 #X connect 1 0 2 0;
@@ -248,4 +247,3 @@ lfo_amount 12 \, lfo1_amount 127 \, mode legato \, osc2_waveform 15
 #X connect 33 0 25 0;
 #X connect 34 0 3 0;
 #X connect 35 0 29 0;
-#X connect 36 0 31 0;

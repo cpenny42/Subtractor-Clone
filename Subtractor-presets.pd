@@ -8978,9 +8978,56 @@ print all available [name_manager] methods \, ----------------------------------
 #X connect 0 0 2 0;
 #X connect 3 0 1 0;
 #X restore 497 591 pd \$0-dr;
-#X msg 105 -23 Polyphony all;
-#X msg 195 -26 view;
 #X obj 497 656 outlet DICTIONARY_OUTPUT;
+#N canvas 921 75 431 507 IMPORTING_PRESETS_FROM_OUTSIDE 0;
+#X text 27 9 It is possible to import someone else's preset into your
+own Subtractor-presets module.;
+#N canvas 1034 292 450 300 Subtractor-presets2 0;
+#X obj 27 152 outlet;
+#X text 29 52 This is just a dummy patch showing how to connect another
+Subtractor-presets.pd patch to this to import a preset.;
+#X obj 34 17 inlet;
+#X obj 103 152 outlet;
+#X obj 187 152 outlet;
+#X restore 73 364 pd Subtractor-presets2;
+#X obj 73 385 list prepend MY_NEW_PRESET;
+#X obj 73 405 list trim;
+#N canvas 965 338 450 300 Subtractor-presets 0;
+#X obj 11 5 inlet;
+#X text 12 46 This is just a placeholder patch to represent how to
+import a preset from another Subtractor-presets patch.;
+#X obj 17 90 outlet;
+#X obj 108 91 outlet;
+#X obj 196 90 outlet;
+#X restore 125 439 pd Subtractor-presets;
+#X msg 237 409 init MY_NEW_PRESET;
+#X text 29 46 To do so \, rename the second module to something else
+(I'll use presets2 for now). Open that object in this patch \, then
+add a [list prepend <preset_name>] and [list trim] connected to the
+outlet of the second preset module.;
+#X text 29 106 You need to initialize your preset first \, so send
+the message "init <preset_name>" to the [route] object at the top of
+this patch.;
+#X text 32 155 You can then send the message "<old_preset_name> all
+to the second preset module to import all the values stored within
+it.;
+#X obj 210 284 bng 15 250 50 0 empty empty Import_Preset 17 7 0 10
+-262144 -1 -1;
+#X msg 73 343 OLD_PRESET all;
+#X obj 210 306 t b b;
+#X text 32 203 The example below shows how you would import a preset
+named OLD_PRESET into your Subtractor-presets module as MY_NEW_PRESET
+from outside this patch. It give you the old preset \, but with the
+new name that you set.;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 5 0 4 0;
+#X connect 9 0 11 0;
+#X connect 10 0 1 0;
+#X connect 11 0 10 0;
+#X connect 11 1 5 0;
+#X restore 401 -17 pd IMPORTING_PRESETS_FROM_OUTSIDE;
 #X connect 0 0 65 0;
 #X connect 1 0 11 0;
 #X connect 2 0 8 0;
@@ -9073,6 +9120,4 @@ print all available [name_manager] methods \, ----------------------------------
 #X connect 69 0 68 0;
 #X connect 69 1 21 0;
 #X connect 70 0 17 1;
-#X connect 71 0 74 0;
-#X connect 72 0 65 0;
-#X connect 73 0 65 0;
+#X connect 71 0 72 0;
