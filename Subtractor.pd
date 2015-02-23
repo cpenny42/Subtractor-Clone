@@ -366,7 +366,7 @@ Freq_2 -4 28 1 9 -128992 -221187 -228856 0 1;
 #X obj 8 6 inlet;
 #N canvas 514 421 270 77 \$0-dynamic_polyphony_guts 0;
 #X obj 0 0 inlet;
-#X obj 0 20 poly 0 1;
+#X obj 0 20 poly 16 1;
 #X obj 0 40 outlet;
 #X obj 100 40 outlet;
 #X obj 200 40 outlet;
@@ -18296,7 +18296,7 @@ velocity_phase \, velocity_freq2 \, velocity_filter_env \, velocity_filter_decay
 #X obj 21 100 outlet;
 #X obj 21 10 inlet BANG;
 #X obj 92 11 inlet ANYTHING;
-#X msg 21 78 filter_freq;
+#X msg 21 78 osc12;
 #X obj 43 33 list prepend set;
 #X obj 29 56 list trim;
 #X connect 3 0 5 0;
